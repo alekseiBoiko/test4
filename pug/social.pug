@@ -1,6 +1,6 @@
-div.d-flex.justify-content-center
-    i.fab.fa-facebook-f
-    i.fab.fa-twitter
-    i.fab.fa-instagram
-    i.fab.fa-pinterest-p
-    i.fas.fa-rss
+ul.d-flex.justify-content-between.social-list
+    each socialmedia in ['facebook-f', 'twitter', 'instagram', 'pinterest-p', 'rss']
+        li.nav-item
+          a.nav-link(href=socialmedia+".com")
+            i(class=`fab fa-${socialmedia}`)
+

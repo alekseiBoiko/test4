@@ -1,4 +1,43 @@
-#header {
+#header-top {
     height: 70px;
     text-transform: uppercase;
+    margin-right: 40px;
+    
+    .nav {
+        width: 514px;
+        padding: 0;
+
+        .nav-link {
+            color: #4d4d4d;
+            font-size: 13px;
+            font-family: 'Montserrat', sans-serif;
+    
+            &:hover,&:active {
+                color: #22bb66;
+            }
+        }
+    }
+}
+
+.logo {
+    margin-top: 125px;
+
+    .tagline {
+        
+        // &::before {
+        //     height: 2px;
+        //     width: 100px;
+        //     background-color: #22bb66;
+        // }
+
+        // &::after {
+        //     height: 2px;
+        //     width: 100px;
+        //     background-color: #22bb66;
+        // }
+    }
+
+    img {
+        margin-left: 130px;
+    }
 }

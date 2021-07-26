@@ -1,10 +1,46 @@
-#body-background {
-  background-image: url(/images/bg_part.jpg);
-  background-size: contain; }
+@font-face {
+  font-family: "DroidSerif-Regular";
+  src: url("../fonts/DroidSerif/DroidSerif-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 
-#header {
+@font-face {
+  font-family: "DroidSerif-Italic";
+  src: url("../fonts/DroidSerif/DroidSerif-Italic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+body {
+  background-image: url(/images/bg_part.jpg);
+  background-size: contain;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px; }
+
+#header-top {
   height: 70px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-right: 40px; }
+  #header-top .nav {
+    width: 514px;
+    padding: 0; }
+    #header-top .nav .nav-link {
+      color: #4d4d4d;
+      font-size: 13px;
+      font-family: 'Montserrat', sans-serif; }
+      #header-top .nav .nav-link:hover, #header-top .nav .nav-link:active {
+        color: #22bb66; }
+
+.logo {
+  margin-top: 125px; }
+  .logo img {
+    margin-left: 130px; }
 
 #content {
   margin-top: 500px; }
+
+.social-list {
+  width: 170px; }
+  .social-list .fab {
+    color: #c7c7c7; }
+    .social-list .fab:hover, .social-list .fab:active {
+      color: black; }
