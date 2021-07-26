@@ -1,5 +1,7 @@
-header.d-flex.justify-content-center.py-3#header
-        ul.nav
-          each value, name in {'main' : '1', 'demos' : '2', 'portfolio' : '3', 'blog' : '4', 'shrtcodes' : '5'}
-            li.nav-item
-              a.nav-link.active(href= "#"+value )= b:name 
+header.fixed-top.bg-light.d-flex.justify-content-center.py-3#header
+  ul.nav
+    each value, name in {'main' : '1', 'demos' : '2', 'portfolio' : '3', 'blog' : '4', 'shortcodes' : '5'}
+      li.nav-item
+        a.nav-link(href="#"+value)
+          b=name
+  

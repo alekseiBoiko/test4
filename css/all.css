@@ -1,3 +1,10 @@
+#body-background {
+  background-image: url(/images/bg_part.jpg);
+  background-size: contain; }
+
 #header {
   height: 70px;
   text-transform: uppercase; }
+
+#content {
+  margin-top: 500px; }
