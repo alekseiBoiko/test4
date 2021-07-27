@@ -37,7 +37,7 @@ body {
   max-width: 1685px;
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
-  background-image: url(/images/bg_part.jpg);
+  background-image: url(../images/bg_part.jpg);
   background-size: contain; }
 
 .slide-button {
@@ -45,7 +45,7 @@ body {
   width: 163px;
   height: 43px;
   padding: 12px 2rem;
-  margin: 50px 0;
+  margin: 55px 0 120px;
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   color: white;
@@ -63,7 +63,8 @@ body {
     width: 177px;
     height: 57px;
     content: '';
-    background-color: #7a7a7a; }
+    background-color: #7a7a7a;
+    border-radius: 5px; }
 
 #header-top {
   height: 70px;
@@ -98,23 +99,40 @@ body {
     .logo .tagline::after {
       left: 200px; }
 
-.carousel-custom {
+.carousel-item-custom {
+  z-index: 1;
   color: white;
   background-color: #595959; }
-  .carousel-custom .carousel-item-custom {
-    text-align: center; }
-  .carousel-custom .slide-title {
+  .carousel-item-custom .slide-title {
     max-width: 545px;
     margin: 170px 0 40px 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px; }
-  .carousel-custom .slide-text {
+  .carousel-item-custom .slide-text {
     max-width: 440px;
     font-family: 'droid_serifitalic';
     font-size: 15px; }
 
+.move-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #474747;
+  border-radius: 3px;
+  margin-top: 90px; }
+  .move-icon #right-icon {
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1); }
+
 #content {
-  margin-top: 500px; }
+  margin: 0 290px 0 260px; }
+  #content .lifestyle-inner {
+    margin: 85px 0; }
+    #content .lifestyle-inner .lifestyle-box {
+      border: 6px solid white;
+      background-color: #808080;
+      -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+      min-height: 250px; }
 
 .social-list {
   width: 170px;
