@@ -1,0 +1,29 @@
+.carousel-custom {
+    color: white;
+    background-color: #595959;
+
+    .carousel-item-custom {
+        text-align: center;
+    }
+
+    .slide-title {
+        max-width: 545px;
+        margin: 170px 0 40px 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+    }
+
+    .slide-text {
+        max-width: 440px;
+        font-family: 'droid_serifitalic';
+        font-size: 15px;
+    }
+
+    // .slide-button-back {
+    //     width: 177px;
+    //     height: 57px;
+    //     margin: 50px 0;
+    //     background-color: #7a7a7a;
+    //     border-radius: 5px;
+    // }
+}

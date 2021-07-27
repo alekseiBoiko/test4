@@ -1,7 +1,6 @@
 #header-top {
     height: 70px;
     text-transform: uppercase;
-    margin-right: 40px;
     
     .nav {
         width: 514px;
@@ -19,25 +18,34 @@
     }
 }
 
+%greenline {
+    height: 2px;
+    width: 100px;
+    background-color: #22bb66;
+    position: absolute;
+    top: 13px;
+    content: "";
+}
+
 .logo {
-    margin-top: 125px;
+    margin: 125px 0 100px 0;
 
     .tagline {
-        
-        // &::before {
-        //     height: 2px;
-        //     width: 100px;
-        //     background-color: #22bb66;
-        // }
+        position: relative;
+        font-family: 'bira_personal_use_onlyregular';
+        font-size: 12px;
+        margin: 3px 0 1rem 0;
 
-        // &::after {
-        //     height: 2px;
-        //     width: 100px;
-        //     background-color: #22bb66;
-        // }
-    }
+        &::before {
+            @extend %greenline;
+            
+            right: 200px;
+        }
 
-    img {
-        margin-left: 130px;
+        &::after {
+            @extend %greenline;
+            
+            left: 200px;
+        }
     }
 }
