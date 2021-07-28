@@ -1,13 +1,19 @@
+%button {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .slide-button {
+    @extend %button;
+
     position: relative;
     width: 163px;
     height: 43px;
     padding: 12px 2rem;
     margin: 55px 0 120px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     color: white;
-    text-decoration: none;
     background-color: #22bb66;
     border: none;
     border-radius: 5px;
@@ -24,4 +30,57 @@
         background-color: #7a7a7a;
         border-radius: 5px;
     }
+}
+
+.lifestyle-button {
+    @extend %button;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 131px;
+    height: 37px;
+    font-size: 12px;
+    color: black;
+    background-color: white;
+    transform: translate(-50%, -50%);
+
+    &::before, &::after {
+        position: absolute;
+        z-index: -1;
+        content: '';
+    }
+
+    &::before {
+        top: -7px;
+        left: -7px;
+        width: 144px;
+        height: 50px;
+        border: 2px solid white;
+    }    
+}
+
+.lifestyle-button.active {
+    @extend .lifestyle-button;
+
+    &::after {
+        left: 50%;
+        width: 23px;
+        height: 250px;
+        margin-right: -50%;
+        content: '';
+        background-color: white;
+        transform: translate(-50%, 0);
+    }
+}
+
+.display-button {
+    @extend %button;
+
+    width: 78px;
+    height: 27px;
+    padding: 1rem 2rem;
+    font-size: 10px;
+    color: #22bb66;
+    border: 1px solid #22bb66;
 }

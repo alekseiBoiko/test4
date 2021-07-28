@@ -1,9 +1,38 @@
+mixin lifestyleBlock (liNumber)
+    - for (var x=0; x<liNumber; x++)
+        li.col-4.lifestyle-col
+            .lifestyle-container
+                .lifestyle-box
+            if x ==0
+                a.lifestyle-button.active.d-flex.justify-content-center.align-items-center(href="#") 
+                    b lifestyle
+            else 
+                a.lifestyle-button.d-flex.justify-content-center.align-items-center(href="#") 
+                    b lifestyle
+
 #content
     .container
-        .row.lifestyle-inner
+        ul.row.lifestyle-inner
+            +lifestyleBlock ('3')
+        .row
+            .col-8.left-content-side
+                .travel-block.d-flex.flex-column.justify-content-center.align-items-center.w-100 
+                    .displayImage.w-100
+                    .display-buttons-container
+                        a.display-button
+                            b travel
+                        a.display-button
+                            b travel
+                    .display-title
+                    .display-text
+                    .display-footer 
+                        .date-button
+                        include social.pug
+                        .label-read
+                .row 
+                    .col-4 
+                        .travel-block 
+                    .col-4 
+                        .travel-block 
+
             .col-4
-                .lifestyle-box
-            .col-4
-                .lifestyle-box
-            .col-4
-                .lifestyle-box

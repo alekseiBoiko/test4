@@ -1,16 +1,48 @@
 #content {
     margin: 0 290px 0 260px;
-    
-    .lifestyle-inner {
-        
-        margin: 85px 0;
 
-        .lifestyle-box {
-            // max-width: 355px;
-            border: 6px solid white;
-            background-color: #808080;
-            box-shadow: 0 0 2px rgba(0,0,0,0.25);
-            min-height: 250px;
+    .lifestyle-inner {
+        margin: 85px 0 70px;
+
+        .lifestyle-col {
+            position: relative;
+            height: 250px;
+
+            .lifestyle-container {
+                position: relative;
+                height: 100%;
+                background-color: white;
+                box-shadow: 0 0 2px rgba(0,0,0,0.25);
+
+                .lifestyle-box {
+                    width: 100%;
+                    height: 100%;
+                    background-color: #808080;
+                    border: 6px solid white;
+                }
+            }
+        }
+    }
+
+    .left-content-side {    
+        .travel-block {
+            .displayImage {
+                height: 400px;
+                background-color: #666;
+            }
+
+            // .display-buttons-container {
+
+            // }
+
+                    //     a
+                    //     a.display-button
+                    // .display-title
+                    // .display-text
+                    // .display-footer 
+                    //     .date-button
+                    //     include social.pug
+                    //     .label-read
         }
     }
 }
