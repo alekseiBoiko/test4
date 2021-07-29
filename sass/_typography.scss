@@ -1,7 +1,21 @@
 body {
-    width: 1685px;
+    max-width: 1685px;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     background-image: url(../images/bg_part.jpg);
     background-size: contain;
+}
+
+h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.social-list {
+    width: 170px;
+    padding: 0;
+    margin-bottom: 0;
+
+    .fab, .fas {
+        color: #c7c7c7;
+    }
 }

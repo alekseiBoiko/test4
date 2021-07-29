@@ -6,7 +6,7 @@ header
           a.nav-link(href="#"+value)
             b=name
   .logo.d-flex.flex-column.align-items-center
-    include social.pug
+    +socialList('logo-social-icon')
     .tagline 
       b your tagline will go right here 
     img(src="images/logo.png", alt="breviter")

@@ -1,3 +1,26 @@
+mixin socialList(iconHoverClass)
+    ul.d-flex.justify-content-between.align-items-center.social-list
+      each socialmedia in ['facebook-f', 'twitter', 'instagram', 'pinterest-p', 'rss']
+          li
+            a(href=socialmedia+".com")
+              if socialmedia=='rss'
+                i(class=`fas fa-${socialmedia} ${iconHoverClass}`)
+              else
+                i(class=`fab fa-${socialmedia} ${iconHoverClass}`)
+
+mixin lifestyleBlock (liNumber)
+    - for (var x=0; x<liNumber; x++)
+        li.col-4.lifestyle-col
+            .lifestyle-container
+                .lifestyle-box
+            if x ==0
+                a.lifestyle-button.active.d-flex.justify-content-center.align-items-center(href="#") 
+                    b lifestyle
+            else 
+                a.lifestyle-button.d-flex.justify-content-center.align-items-center(href="#") 
+                    b lifestyle
+
+
 doctype html
 html(lang='en')
   head

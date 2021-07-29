@@ -1,34 +1,28 @@
-mixin lifestyleBlock (liNumber)
-    - for (var x=0; x<liNumber; x++)
-        li.col-4.lifestyle-col
-            .lifestyle-container
-                .lifestyle-box
-            if x ==0
-                a.lifestyle-button.active.d-flex.justify-content-center.align-items-center(href="#") 
-                    b lifestyle
-            else 
-                a.lifestyle-button.d-flex.justify-content-center.align-items-center(href="#") 
-                    b lifestyle
+
 
 #content
     .container
-        ul.row.lifestyle-inner
+        ul.row.lifestyle-inner.justify-content-between
             +lifestyleBlock ('3')
         .row
             .col-8.left-content-side
-                .travel-block.d-flex.flex-column.justify-content-center.align-items-center.w-100 
+                .travel-block.d-flex.flex-column.justify-content-between.align-items-center.text-center.w-100 
                     .displayImage.w-100
-                    .display-buttons-container
-                        a.display-button
-                            b travel
-                        a.display-button
-                            b travel
-                    .display-title
-                    .display-text
-                    .display-footer 
-                        .date-button
-                        include social.pug
-                        .label-read
+                    .display-content.w-100
+                        .display-buttons-container.d-flex.justify-content-center.align-items-center
+                            a.display-button.d-flex.justify-content-center.align-items-center travel
+                            .circle
+                            a.display-button.d-flex.justify-content-center.align-items-center travel
+                        h3.display-title 
+                            b Playfair Display: A new level of new typefaces and fonts that will make you literally glow...
+                        p.display-text Ready to amp up your closet with the season’s must-have accessory? Thanks to celebs like Kendall Jenner and Rosie Huntington-Whiteley, Western-inspired belts have quickly become fashion’s cool-girl accessory. Really, we’ve gathered a gang of stylish celebs and top bloggers wearing the big-buckled belt to prove the accessory amps up any outfit. So, are you ready.
+                    .display-footer.d-flex.justify-content-between.align-items-center.w-100
+                        a.footer-button.d-flex.justify-content-center.align-items-center APRIL 29, 2014
+                        +socialList('display-social-icon')
+                        .btn-group.display-btn-group
+                            a.footer-button.d-flex.justify-content-center.align-items-center READ MORE
+                            a.display-button-addon
+                                i.fas.fa-chevron-right
                 .row 
                     .col-4 
                         .travel-block 

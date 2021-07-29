@@ -30,6 +30,10 @@
 .logo {
     margin: 125px 0 100px 0;
 
+    .logo-social-icon:hover, .logo-social-icon:active {
+        color: black;
+    }
+
     .tagline {
         position: relative;
         font-family: 'bira_personal_use_onlyregular';
@@ -38,13 +42,13 @@
 
         &::before {
             @extend %greenline;
-            
+
             right: 200px;
         }
 
         &::after {
             @extend %greenline;
-            
+
             left: 200px;
         }
     }

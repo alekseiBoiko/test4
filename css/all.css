@@ -34,13 +34,23 @@
   font-style: normal; }
 
 body {
-  width: 1685px;
+  max-width: 1685px;
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   background-image: url(../images/bg_part.jpg);
   background-size: contain; }
 
-.slide-button, .lifestyle-button, .lifestyle-button.active, .display-button {
+h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif; }
+
+.social-list {
+  width: 170px;
+  padding: 0;
+  margin-bottom: 0; }
+  .social-list .fab, .social-list .fas {
+    color: #c7c7c7; }
+
+.slide-button, .lifestyle-button, .lifestyle-button.active, .display-button, .footer-button, .display-button-addon {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   text-transform: uppercase; }
@@ -104,10 +114,30 @@ body {
 .display-button {
   width: 78px;
   height: 27px;
-  padding: 1rem 2rem;
   font-size: 10px;
   color: #22bb66;
-  border: 1px solid #22bb66; }
+  border: 1px solid #22bb66;
+  border-radius: 3px; }
+  .display-button:hover {
+    color: white;
+    background: #22bb66; }
+
+.footer-button {
+  font-size: 10px;
+  color: #c7c7c7;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  width: 140px; }
+
+.display-button-addon {
+  color: white;
+  background-color: #22bb66;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  height: 100%;
+  width: 30px;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25); }
 
 #header-top {
   height: 70px;
@@ -132,6 +162,8 @@ body {
 
 .logo {
   margin: 125px 0 100px 0; }
+  .logo .logo-social-icon:hover, .logo .logo-social-icon:active {
+    color: black; }
   .logo .tagline {
     position: relative;
     font-family: 'bira_personal_use_onlyregular';
@@ -167,8 +199,9 @@ body {
     transform: scale(-1, 1); }
 
 #content {
-  margin: 0 290px 0 260px; }
+  margin: 0 17.21% 0 15.43%; }
   #content .lifestyle-inner {
+    padding: 0;
     margin: 85px 0 70px; }
     #content .lifestyle-inner .lifestyle-col {
       position: relative;
@@ -184,15 +217,34 @@ body {
           height: 100%;
           background-color: #808080;
           border: 6px solid white; }
-  #content .left-content-side .travel-block .displayImage {
-    height: 400px;
-    background-color: #666; }
-
-.social-list {
-  width: 170px;
-  margin-bottom: 10px;
-  padding: 0; }
-  .social-list .fab {
-    color: #c7c7c7; }
-    .social-list .fab:hover, .social-list .fab:active {
-      color: black; }
+  #content .left-content-side .travel-block {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25); }
+    #content .left-content-side .travel-block .displayImage {
+      height: 395px;
+      background-color: #666; }
+    #content .left-content-side .travel-block .display-content {
+      padding: 0 40px 0 30px;
+      background: #fff; }
+      #content .left-content-side .travel-block .display-content .display-buttons-container {
+        margin: 30px 0 25px; }
+        #content .left-content-side .travel-block .display-content .display-buttons-container .circle {
+          width: 5px;
+          height: 5px;
+          margin: 0 1rem;
+          background-color: #c7c7c7;
+          border-radius: 50%; }
+      #content .left-content-side .travel-block .display-content .display-title {
+        font-size: 24px; }
+      #content .left-content-side .travel-block .display-content .display-text {
+        margin: 40px 0;
+        font-family: 'droid_serifregular', sans-serif;
+        font-size: 14px; }
+    #content .left-content-side .travel-block .display-footer {
+      height: 67px;
+      padding: 0 40px 0 30px;
+      background-color: #f9f9f9; }
+      #content .left-content-side .travel-block .display-footer .display-social-icon:hover, #content .left-content-side .travel-block .display-footer .display-social-icon:active {
+        color: #22bb66; }
+      #content .left-content-side .travel-block .display-footer .display-btn-group {
+        height: 30px; }

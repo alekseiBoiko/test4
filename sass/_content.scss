@@ -1,7 +1,8 @@
 #content {
-    margin: 0 290px 0 260px;
+    margin: 0 17.21% 0 15.43%;
 
     .lifestyle-inner {
+        padding: 0;
         margin: 85px 0 70px;
 
         .lifestyle-col {
@@ -24,25 +25,58 @@
         }
     }
 
-    .left-content-side {    
+    .left-content-side {
         .travel-block {
+            box-shadow: 0 0 5px rgba(0,0,0,0.25);
+
             .displayImage {
-                height: 400px;
+                height: 395px;
+                // margin-bottom: 30px;
                 background-color: #666;
             }
 
-            // .display-buttons-container {
+            .display-content {
+                padding: 0 40px 0 30px;
+                // margin: 0 40px;
+                background: #fff;
 
-            // }
+                .display-buttons-container {
+                    // width: 170px;
+                    margin: 30px 0 25px;
+    
+                    .circle {
+                        width: 5px;
+                        height: 5px;
+                        margin: 0 1rem;
+                        background-color: $light-gray;
+                        border-radius: 50%;
+                    }
+                }
 
-                    //     a
-                    //     a.display-button
-                    // .display-title
-                    // .display-text
-                    // .display-footer 
-                    //     .date-button
-                    //     include social.pug
-                    //     .label-read
+                .display-title {
+                    font-size: 24px;
+                }
+
+                .display-text {
+                    margin: 40px 0;
+                    font-family: 'droid_serifregular', sans-serif;
+                    font-size: 14px;
+                }
+            }
+
+            .display-footer {
+                height: 67px;
+                padding: 0 40px 0 30px;
+                background-color: #f9f9f9;
+
+                .display-social-icon:hover, .display-social-icon:active {
+                    color: $green;
+                }
+
+                .display-btn-group {
+                    height: 30px;
+                }
+            }
         }
     }
 }
