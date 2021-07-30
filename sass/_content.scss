@@ -3,7 +3,6 @@
 
     .lifestyle-inner {
         padding: 0;
-        margin: 85px 0 70px;
 
         .lifestyle-col {
             position: relative;
@@ -31,19 +30,13 @@
 
             .displayImage {
                 height: 395px;
-                // margin-bottom: 30px;
                 background-color: #666;
             }
 
             .display-content {
-                padding: 0 40px 0 30px;
-                // margin: 0 40px;
-                background: #fff;
-
                 .display-buttons-container {
-                    // width: 170px;
                     margin: 30px 0 25px;
-    
+
                     .circle {
                         width: 5px;
                         height: 5px;
@@ -64,17 +57,77 @@
                 }
             }
 
-            .display-footer {
+            .display-bottom {
                 height: 67px;
                 padding: 0 40px 0 30px;
                 background-color: #f9f9f9;
 
-                .display-social-icon:hover, .display-social-icon:active {
-                    color: $green;
+                .display-social-icon {
+                    color: $light-gray;
+
+                    &:hover, &:active {
+                        color: $green;
+                    }
                 }
 
                 .display-btn-group {
                     height: 30px;
+
+                    .display-button-addon.redmore-icov {
+                        height: 10px;
+                    }
+                }
+            }
+        }
+
+        .pagination-item-custom {
+            font-size: 12px;
+            color: black;
+            background: none;
+            border: none;
+
+            &:hover, &:active {
+                color: $green;
+            }
+        }
+    }
+
+    .gift-block {
+        box-shadow: 0 0 5px rgba(0,0,0,0.25);
+
+        .gift-inner {
+            height: 393px;
+            padding-bottom: 60;
+
+            .gift-text {
+                color: #71f9ae;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .share-social-block {
+        .button-block {
+            .share-line {
+                width: 30%;
+                height: 3px;
+                box-shadow: 0 0 2px rgba(0,0,0,0.25);
+            }
+        }
+
+        .follow-block {
+            font-size: 12px;
+            color: #969696;
+
+            .share-social-icon {
+                width: 35px;
+                height: 35px;
+                color: white;
+                background-color: black;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: $green;
                 }
             }
         }

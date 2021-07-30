@@ -1,12 +1,18 @@
-mixin socialList(iconHoverClass)
+- var bigBlockTitle = "Playfair Display: A new level of new typefaces and fonts that will make you literally glow..."
+- var bigBlockText = "Ready to amp up your closet with the season’s must-have accessory? Thanks to celebs like Kendall Jenner and Rosie Huntington-Whiteley, Western-inspired belts have quickly become fashion’s cool-girl accessory. Really, we’ve gathered a gang of stylish celebs and top bloggers wearing the big-buckled belt to prove the accessory amps up any outfit. So, are you ready."
+- var smallBlockTitle = "Playfair Display: A new level of new typefaces & fonts."
+- var smallBlockText = "Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily "
+
+
+mixin socialList(iconClass)
     ul.d-flex.justify-content-between.align-items-center.social-list
       each socialmedia in ['facebook-f', 'twitter', 'instagram', 'pinterest-p', 'rss']
           li
             a(href=socialmedia+".com")
               if socialmedia=='rss'
-                i(class=`fas fa-${socialmedia} ${iconHoverClass}`)
+                i(class=`fas fa-${socialmedia} ${iconClass} d-flex justify-content-center align-items-center`)
               else
-                i(class=`fab fa-${socialmedia} ${iconHoverClass}`)
+                i(class=`fab fa-${socialmedia} ${iconClass} d-flex justify-content-center align-items-center`)
 
 mixin lifestyleBlock (liNumber)
     - for (var x=0; x<liNumber; x++)
@@ -19,6 +25,26 @@ mixin lifestyleBlock (liNumber)
             else 
                 a.lifestyle-button.d-flex.justify-content-center.align-items-center(href="#") 
                     b lifestyle
+
+mixin travelBlock (blockTitle, blockText, socialAdd)
+    .travel-block.d-flex.flex-column.justify-content-between.align-items-center.text-center.w-100.mt-5 
+        .displayImage.w-100
+        .display-content.w-100.bg-white.px-5
+            .display-buttons-container.d-flex.justify-content-center.align-items-center
+                a.display-button.d-flex.justify-content-center.align-items-center.btn.btn-outline(href="#") travel
+                .circle
+                a.display-button.d-flex.justify-content-center.align-items-center.btn.btn-outline(href="#") travel
+            h3.display-title 
+                 b= blockTitle
+            p.display-text= blockText
+        .display-bottom.d-flex.justify-content-between.align-items-center.w-100
+            button.btn.btn-outline.bottom-button-left APRIL 29, 2014
+            if socialAdd == "y"
+              +socialList('display-social-icon')
+            .btn-group(role='group')
+                button.btn.btn-outline.bottom-button-right READ MORE
+                a.btn.display-button-addon.d-flex.justify-content-center.align-items-center(href="#")
+                  i.fas.fa-chevron-right
 
 
 doctype html

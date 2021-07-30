@@ -47,10 +47,8 @@ h2, h3, h4 {
   width: 170px;
   padding: 0;
   margin-bottom: 0; }
-  .social-list .fab, .social-list .fas {
-    color: #c7c7c7; }
 
-.slide-button, .lifestyle-button, .lifestyle-button.active, .display-button, .footer-button, .display-button-addon {
+.slide-button, .lifestyle-button, .lifestyle-button.active, .display-button, .bottom-button-left, .bottom-button-right, .share-button, .display-button-addon {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   text-transform: uppercase; }
@@ -122,20 +120,28 @@ h2, h3, h4 {
     color: white;
     background: #22bb66; }
 
-.footer-button {
+.bottom-button-left, .bottom-button-right, .share-button {
+  height: 30px;
   font-size: 10px;
   color: #c7c7c7;
+  border-radius: 3px;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25); }
+
+.bottom-button-left {
   width: 140px; }
 
+.bottom-button-right {
+  width: 115px; }
+
 .display-button-addon {
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
   color: white;
   background-color: #22bb66;
   border: none;
   border-radius: 0 3px 3px 0;
-  height: 100%;
-  width: 30px;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.25); }
 
@@ -146,29 +152,31 @@ h2, h3, h4 {
     width: 514px;
     padding: 0; }
     #header-top .nav .nav-link {
-      color: #4d4d4d;
+      font-family: 'Montserrat', sans-serif;
       font-size: 13px;
-      font-family: 'Montserrat', sans-serif; }
+      color: #4d4d4d; }
       #header-top .nav .nav-link:hover, #header-top .nav .nav-link:active {
         color: #22bb66; }
 
 .logo .tagline::before, .logo .tagline::after {
-  height: 2px;
-  width: 100px;
-  background-color: #22bb66;
   position: absolute;
   top: 13px;
-  content: ""; }
+  width: 100px;
+  height: 2px;
+  content: "";
+  background-color: #22bb66; }
 
 .logo {
   margin: 125px 0 100px 0; }
-  .logo .logo-social-icon:hover, .logo .logo-social-icon:active {
-    color: black; }
+  .logo .logo-social-icon {
+    color: #c7c7c7; }
+    .logo .logo-social-icon:hover, .logo .logo-social-icon:active {
+      color: black; }
   .logo .tagline {
     position: relative;
+    margin: 3px 0 1rem 0;
     font-family: 'bira_personal_use_onlyregular';
-    font-size: 12px;
-    margin: 3px 0 1rem 0; }
+    font-size: 12px; }
     .logo .tagline::before {
       right: 200px; }
     .logo .tagline::after {
@@ -201,8 +209,7 @@ h2, h3, h4 {
 #content {
   margin: 0 17.21% 0 15.43%; }
   #content .lifestyle-inner {
-    padding: 0;
-    margin: 85px 0 70px; }
+    padding: 0; }
     #content .lifestyle-inner .lifestyle-col {
       position: relative;
       height: 250px; }
@@ -223,28 +230,61 @@ h2, h3, h4 {
     #content .left-content-side .travel-block .displayImage {
       height: 395px;
       background-color: #666; }
-    #content .left-content-side .travel-block .display-content {
-      padding: 0 40px 0 30px;
-      background: #fff; }
-      #content .left-content-side .travel-block .display-content .display-buttons-container {
-        margin: 30px 0 25px; }
-        #content .left-content-side .travel-block .display-content .display-buttons-container .circle {
-          width: 5px;
-          height: 5px;
-          margin: 0 1rem;
-          background-color: #c7c7c7;
-          border-radius: 50%; }
-      #content .left-content-side .travel-block .display-content .display-title {
-        font-size: 24px; }
-      #content .left-content-side .travel-block .display-content .display-text {
-        margin: 40px 0;
-        font-family: 'droid_serifregular', sans-serif;
-        font-size: 14px; }
-    #content .left-content-side .travel-block .display-footer {
+    #content .left-content-side .travel-block .display-content .display-buttons-container {
+      margin: 30px 0 25px; }
+      #content .left-content-side .travel-block .display-content .display-buttons-container .circle {
+        width: 5px;
+        height: 5px;
+        margin: 0 1rem;
+        background-color: #c7c7c7;
+        border-radius: 50%; }
+    #content .left-content-side .travel-block .display-content .display-title {
+      font-size: 24px; }
+    #content .left-content-side .travel-block .display-content .display-text {
+      margin: 40px 0;
+      font-family: 'droid_serifregular', sans-serif;
+      font-size: 14px; }
+    #content .left-content-side .travel-block .display-bottom {
       height: 67px;
       padding: 0 40px 0 30px;
       background-color: #f9f9f9; }
-      #content .left-content-side .travel-block .display-footer .display-social-icon:hover, #content .left-content-side .travel-block .display-footer .display-social-icon:active {
-        color: #22bb66; }
-      #content .left-content-side .travel-block .display-footer .display-btn-group {
+      #content .left-content-side .travel-block .display-bottom .display-social-icon {
+        color: #c7c7c7; }
+        #content .left-content-side .travel-block .display-bottom .display-social-icon:hover, #content .left-content-side .travel-block .display-bottom .display-social-icon:active {
+          color: #22bb66; }
+      #content .left-content-side .travel-block .display-bottom .display-btn-group {
         height: 30px; }
+        #content .left-content-side .travel-block .display-bottom .display-btn-group .display-button-addon.redmore-icov {
+          height: 10px; }
+  #content .left-content-side .pagination-item-custom {
+    font-size: 12px;
+    color: black;
+    background: none;
+    border: none; }
+    #content .left-content-side .pagination-item-custom:hover, #content .left-content-side .pagination-item-custom:active {
+      color: #22bb66; }
+  #content .gift-block {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25); }
+    #content .gift-block .gift-inner {
+      height: 393px;
+      padding-bottom: 60; }
+      #content .gift-block .gift-inner .gift-text {
+        color: #71f9ae;
+        text-transform: uppercase; }
+  #content .share-social-block .button-block .share-line {
+    width: 30%;
+    height: 3px;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25); }
+  #content .share-social-block .follow-block {
+    font-size: 12px;
+    color: #969696; }
+    #content .share-social-block .follow-block .share-social-icon {
+      width: 35px;
+      height: 35px;
+      color: white;
+      background-color: black;
+      border-radius: 50%; }
+      #content .share-social-block .follow-block .share-social-icon:hover {
+        background-color: #22bb66; }

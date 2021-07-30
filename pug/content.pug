@@ -2,31 +2,43 @@
 
 #content
     .container
-        ul.row.lifestyle-inner.justify-content-between
+        ul.row.lifestyle-inner.justify-content-between.mt-5
             +lifestyleBlock ('3')
         .row
             .col-8.left-content-side
-                .travel-block.d-flex.flex-column.justify-content-between.align-items-center.text-center.w-100 
-                    .displayImage.w-100
-                    .display-content.w-100
-                        .display-buttons-container.d-flex.justify-content-center.align-items-center
-                            a.display-button.d-flex.justify-content-center.align-items-center travel
-                            .circle
-                            a.display-button.d-flex.justify-content-center.align-items-center travel
-                        h3.display-title 
-                            b Playfair Display: A new level of new typefaces and fonts that will make you literally glow...
-                        p.display-text Ready to amp up your closet with the season’s must-have accessory? Thanks to celebs like Kendall Jenner and Rosie Huntington-Whiteley, Western-inspired belts have quickly become fashion’s cool-girl accessory. Really, we’ve gathered a gang of stylish celebs and top bloggers wearing the big-buckled belt to prove the accessory amps up any outfit. So, are you ready.
-                    .display-footer.d-flex.justify-content-between.align-items-center.w-100
-                        a.footer-button.d-flex.justify-content-center.align-items-center APRIL 29, 2014
-                        +socialList('display-social-icon')
-                        .btn-group.display-btn-group
-                            a.footer-button.d-flex.justify-content-center.align-items-center READ MORE
-                            a.display-button-addon
-                                i.fas.fa-chevron-right
+                +travelBlock (bigBlockTitle, bigBlockText, "y")
                 .row 
-                    .col-4 
-                        .travel-block 
-                    .col-4 
-                        .travel-block 
-
-            .col-4
+                    .col-6
+                        +travelBlock (smallBlockTitle, smallBlockText)
+                    .col-6 
+                        +travelBlock (smallBlockTitle, smallBlockText)
+                +travelBlock (bigBlockTitle, bigBlockText, "y")
+                .row
+                    .col-6
+                        +travelBlock (smallBlockTitle, smallBlockText)
+                    .col-6 
+                        +travelBlock (smallBlockTitle, smallBlockText)
+                +travelBlock (bigBlockTitle, bigBlockText, "y")
+                .pagination.d-flex.justify-content-center.align-items-center.my-5 
+                    .page-item
+                        a.page-link.pagination-item-custom
+                            b « NEWER POSTS
+                    .page-div / 
+                    .page-item
+                        a.page-link.pagination-item-custom 
+                            b OLDER POSTS »
+            .col-4.right-content-side
+                .gift-block.bg-white.px-5.py-4.w-100.my-5
+                    .gift-inner.bg-secondary.w-100.d-flex.flex-column.justify-content-end.align-items-center
+                        img.gift-img(src="images/world-gift.png", alt="world gift")
+                        .gift-text 
+                            b OR GET STARTED ON SOME JOB...
+                .share-social-block.bg-white.px-5.py-4.w-100
+                    .button-block.d-flex.justify-content-between.align-items-center
+                        .share-line
+                        a.share-button SHARE ON
+                        .share-line
+                    .follow-block.d-flex.justify-content-between
+                        .follow-text FOLLOW ME
+                        i.fas.fa-caret-right
+                        +socialList ('share-social-icon')

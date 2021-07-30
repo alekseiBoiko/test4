@@ -1,44 +1,48 @@
 #header-top {
     height: 70px;
     text-transform: uppercase;
-    
+
     .nav {
         width: 514px;
         padding: 0;
 
         .nav-link {
-            color: #4d4d4d;
-            font-size: 13px;
             font-family: 'Montserrat', sans-serif;
-    
+            font-size: 13px;
+            color: #4d4d4d;
+
             &:hover,&:active {
-                color: #22bb66;
+                color: $green;
             }
         }
     }
 }
 
 %greenline {
-    height: 2px;
-    width: 100px;
-    background-color: #22bb66;
     position: absolute;
     top: 13px;
+    width: 100px;
+    height: 2px;
     content: "";
+    background-color: $green;
 }
 
 .logo {
     margin: 125px 0 100px 0;
 
-    .logo-social-icon:hover, .logo-social-icon:active {
-        color: black;
+    .logo-social-icon {
+        color: $light-gray;
+
+        &:hover, &:active {
+            color: black;
+        }
     }
 
     .tagline {
         position: relative;
+        margin: 3px 0 1rem 0;
         font-family: 'bira_personal_use_onlyregular';
         font-size: 12px;
-        margin: 3px 0 1rem 0;
 
         &::before {
             @extend %greenline;
