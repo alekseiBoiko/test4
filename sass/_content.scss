@@ -49,12 +49,6 @@
                 .display-title {
                     font-size: 24px;
                 }
-
-                .display-text {
-                    margin: 40px 0;
-                    font-family: 'droid_serifregular', sans-serif;
-                    font-size: 14px;
-                }
             }
 
             .display-bottom {
@@ -62,20 +56,13 @@
                 padding: 0 40px 0 30px;
                 background-color: #f9f9f9;
 
-                .display-social-icon {
-                    color: $light-gray;
-
-                    &:hover, &:active {
-                        color: $green;
-                    }
-                }
-
                 .display-btn-group {
                     height: 30px;
+                }
 
-                    .display-button-addon.redmore-icov {
-                        height: 10px;
-                    }
+                .social-list {
+                    width: 170px;
+                    margin-bottom: 0;
                 }
             }
         }
@@ -92,42 +79,69 @@
         }
     }
 
-    .gift-block {
-        box-shadow: 0 0 5px rgba(0,0,0,0.25);
+    .right-content-side {
+        .right-content-block {
+            padding: 33px 27px;
+            margin: 40px 0;
 
-        .gift-inner {
-            height: 393px;
-            padding-bottom: 60;
-
-            .gift-text {
-                color: #71f9ae;
-                text-transform: uppercase;
+            .gift-inner {
+                height: 393px;
+                padding: 60px 30px;
+                background-color: #808080;
+    
+                .gift-text {
+                    margin-top: 10px;
+                    color: #71f9ae;
+                }
             }
-        }
-    }
 
-    .share-social-block {
-        .button-block {
-            .share-line {
-                width: 30%;
-                height: 3px;
-                box-shadow: 0 0 2px rgba(0,0,0,0.25);
+            .follow-block {
+                font-size: 12px;
+                color: #969696;
+    
+                .social-list {
+                    margin: 0 -5px;
+    
+                    .social-item {
+                        margin-right: 5px;
+                    }
+                }
             }
-        }
 
-        .follow-block {
-            font-size: 12px;
-            color: #969696;
+            .testimonials-img {
+                height: 266px;
+                background-color: #808080;
+            }
 
-            .share-social-icon {
-                width: 35px;
-                height: 35px;
-                color: white;
-                background-color: black;
-                border-radius: 50%;
+            .testimonials-link {
+                margin-bottom: 26px;
+                a {
+                    font-family: 'droid_serifregular', sans-serif;
+                    font-size: 14px;
+                    color: #2b6;
+                }
+            }
 
-                &:hover {
-                    background-color: $green;
+            .testimonials-sign {
+                margin-bottom: 30px;
+            }
+
+            .testimonials-social-icon {
+                color:black;
+            }
+
+            .articles-list {
+                margin-bottom: -30px;
+
+                .articles-item {
+                    margin-bottom: 30px;
+
+                    .articles-img {
+                        width: 60px;
+                        height: 60px;
+                        margin-right: 15px;
+                        background-color: #7f7f7f;
+                    }
                 }
             }
         }

@@ -1,3 +1,53 @@
+- var bigBlockTitle = "Playfair Display: A new level of new typefaces and fonts that will make you literally glow..."
+- var bigBlockText = "Ready to amp up your closet with the season’s must-have accessory? Thanks to celebs like Kendall Jenner and Rosie Huntington-Whiteley, Western-inspired belts have quickly become fashion’s cool-girl accessory. Really, we’ve gathered a gang of stylish celebs and top bloggers wearing the big-buckled belt to prove the accessory amps up any outfit. So, are you ready."
+- var smallBlockTitle = "Playfair Display: A new level of new typefaces & fonts."
+- var smallBlockText = "Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily "
+
+mixin lifestyleBlock (blockNumber)
+    - for (var x=0; x<blockNumber; x++)
+        li.col-4.lifestyle-col
+            .lifestyle-container
+                .lifestyle-box
+            if x ==0
+                a.lifestyle-button.active.d-flex.justify-content-center.align-items-center(href="#") 
+                    b lifestyle
+            else 
+                a.lifestyle-button.d-flex.justify-content-center.align-items-center(href="#") 
+                    b lifestyle
+
+mixin travelBlock (blockTitle, blockText, socialAdd)
+    .travel-block.d-flex.flex-column.justify-content-between.align-items-center.text-center.w-100.mt-5 
+        .displayImage.w-100
+        .display-content.w-100.bg-white.px-5
+            .display-buttons-container.d-flex.justify-content-center.align-items-center
+                a.display-button.d-flex.justify-content-center.align-items-center.btn.btn-outline(href="#") travel
+                .circle
+                a.display-button.d-flex.justify-content-center.align-items-center.btn.btn-outline(href="#") travel
+            h3.display-title 
+                 b= blockTitle
+            p#news-text= blockText
+        .display-bottom.d-flex.justify-content-between.align-items-center.w-100
+            button.btn.btn-outline.bottom-button-left APRIL 29, 2014
+            if socialAdd == "y"
+              +socialList('display-social-icon')
+            .btn-group(role='group')
+                button.btn.btn-outline.bottom-button-right READ MORE
+                a.btn.display-button-addon.d-flex.justify-content-center.align-items-center(href="#")
+                  i.fas.fa-chevron-right
+
+mixin shareButton
+    .share-button-block.d-flex.justify-content-center
+        a.share-button.btn.btn-outline SHARE ON
+
+mixin commented-articles(articlesNumber)
+    - for (var x=0; x<articlesNumber; x++)
+         li.articles-item.d-flex.justify-content-between.w100
+            .articles-img
+            .articles-content 
+                .articles-title Playfair Display: A new level of new typefaces and fonts.
+                .articles-comment.text-uppercase 
+                    <i class="fas fa-comment">23 COMMENTS</i>
+                    
 
 
 #content
@@ -28,17 +78,45 @@
                         a.page-link.pagination-item-custom 
                             b OLDER POSTS »
             .col-4.right-content-side
-                .gift-block.bg-white.px-5.py-4.w-100.my-5
-                    .gift-inner.bg-secondary.w-100.d-flex.flex-column.justify-content-end.align-items-center
-                        img.gift-img(src="images/world-gift.png", alt="world gift")
-                        .gift-text 
-                            b OR GET STARTED ON SOME JOB...
-                .share-social-block.bg-white.px-5.py-4.w-100
-                    .button-block.d-flex.justify-content-between.align-items-center
-                        .share-line
-                        a.share-button SHARE ON
-                        .share-line
-                    .follow-block.d-flex.justify-content-between
-                        .follow-text FOLLOW ME
-                        i.fas.fa-caret-right
+                .right-content-block.w-100.bg-white 
+                    .gift-inner.w-100.d-flex.flex-column.justify-content-end.align-items-center
+                        img.img-fluid.gift-img(src="images/world-gift.png", alt="world gift")
+                        .gift-text.text-center 
+                            b.text-uppercase or get started on some job...    
+                .right-content-block.w-100.bg-white
+                    +shareButton
+                    .follow-block.d-flex.justify-content-between.align-items-center
+                        .follow-text 
+                            b FOLLOW ME
+                            i.fas.fa-caret-right.ms-1
                         +socialList ('share-social-icon')
+                .right-content-block.w-100.bg-white 
+                    +shareButton
+                    .testimonials-img 
+                    #news-text.text-center Western-inspired belts have quickly become fashion’s cool-girl accessory. Really,  prove the accessory amps up any outfit. So, are you ready to really support..
+                    .testimonials-link.w-100.text-center
+                        a(href="#") Read more →
+                    .testimonials-sign.d-flex.justify-content-center
+                        img.img-fluid(src="images/signature.png", alt="signature")
+                    +socialList ('testimonials-social-icon')
+                .right-content-block.w-100.bg-white 
+                    +shareButton
+                    form.subscribe-form.w-100
+                        input.form-control.subscribe-input.w-100(type="email" placeholder="E-mail address.. ")
+                        a.btn.subscribe-button.w-100.rounded-bottom.d-flex.justify-content-center.align-items-center(href="#") SUBSCRIBE
+                .right-content-block.w-100.bg-white 
+                    +shareButton
+                    ul.articles-list
+                        +commented-articles('4')
+                .right-content-block.w-100.bg-white 
+                    +shareButton
+                    .input-group.mb-3
+                        input.form-control(type='text' placeholder="Search" aria-label="?" aria-describedby='button-addon2')
+                        button#button-addon2.btn(type='button')
+                            i.far.fa-search
+
+
+
+
+                
+                        

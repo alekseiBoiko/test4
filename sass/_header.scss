@@ -30,12 +30,9 @@
 .logo {
     margin: 125px 0 100px 0;
 
-    .logo-social-icon {
-        color: $light-gray;
-
-        &:hover, &:active {
-            color: black;
-        }
+    .social-list {
+        width: 170px;
+        margin-bottom: 30px;
     }
 
     .tagline {

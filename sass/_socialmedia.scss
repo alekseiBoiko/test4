@@ -1,0 +1,39 @@
+.social-list {
+    // width: 170px;
+    padding: 0;
+    // margin-bottom: 0;
+
+    .social-item {
+        .social-link {
+            text-decoration: none;
+
+            .logo-social-icon {
+                color: $light-gray;
+
+                &:hover, &:active {
+                    color: black;
+                }
+            }
+
+            .display-social-icon {
+                color: $light-gray;
+
+                &:hover, &:active {
+                    color: $green;
+                }
+            }
+
+            .share-social-icon {
+                width: 35px;
+                height: 35px;
+                color: white;
+                background-color: black;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: $green;
+                }
+            }
+        }
+    }
+}

@@ -127,4 +127,41 @@
 
 .share-button {
     @extend %bottom-button;
+
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before, &::after {
+        position: absolute;
+        width: 70px;
+        height: 3px;
+        content: "";
+        box-shadow: 0 0 2px rgba(0,0,0,0.25);
+    }
+
+    &::before {
+        left: 100px;
+    }
+
+    &::after {
+        right: 100px;
+    }
+}
+
+.subscribe-input,.subscribe-button {
+    height: 42px;
+    font-size: 12px;
+}
+
+.subscribe-input {
+    color: #bdbdbd;
+    background-color: #f7f7f7;
+    border: none;
+}
+
+.subscribe-button {
+    @extend %button;
+
+    color: #f7f7f7;
+    background-color: #21bb65;
 }
