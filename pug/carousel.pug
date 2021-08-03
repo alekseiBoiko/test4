@@ -1,23 +1,24 @@
-#carouselExampleControls.carousel.slide <!--(data-bs-ride='carousel') -->
+mixin carouselContent 
+    h2.slide-title 
+        b Playfair Display: A new generation of typefaces and fonts.
+    .slide-text Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily updated everyday moments from all over the world.
+    a.slide-button(href="#")
+        b READ MORE                    
+
+mixin carouselSlide(slideNumber)
+    - for (var x=0; x<slideNumber; x++)
+        if x ==0
+            .carousel-item.active
+                .carousel-item-custom.d-flex.flex-column.align-items-center.text-center
+                    +carouselContent
+        else 
+            .carousel-item
+                .carousel-item-custom.d-flex.flex-column.align-items-center.text-center
+                    +carouselContent
+
+#carouselExampleControls.carousel.slide(data-bs-ride='carousel')
     .carousel-inner
-        .carousel-item-custom.carousel-item.active.d-flex.flex-column.align-items-center.text-center
-            h2.slide-title 
-                b Playfair Display1: A new generation of typefaces and fonts.
-            .slide-text Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily updated everyday moments from all over the world.
-            a.slide-button(href="#")
-                b READ MORE
-        .carousel-item-custom.carousel-item.d-flex.flex-column.align-items-center.text-center
-            h2.slide-title 
-                b Playfair Display2: A new generation of typefaces and fonts.
-            .slide-text Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily updated everyday moments from all over the world.
-            a.slide-button(href="#")
-                b READ MORE
-        .carousel-item-custom.carousel-item.d-flex.flex-column.align-items-center.text-center
-            h2.slide-title 
-                b Playfair Display3: A new generation of typefaces and fonts.
-            .slide-text Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily updated everyday moments from all over the world.
-            a.slide-button(href="#")
-                b READ MORE
+        +carouselSlide('3')
     button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev')
         .move-icon.d-flex.justify-content-center.align-items-center(aria-hidden='true') 
             img(src="images/arrow.png", alt="")

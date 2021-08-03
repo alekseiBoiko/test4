@@ -18,13 +18,17 @@ mixin lifestyleBlock (blockNumber)
 mixin travelBlock (blockTitle, blockText, socialAdd)
     .travel-block.d-flex.flex-column.justify-content-between.align-items-center.text-center.w-100.mt-5 
         .displayImage.w-100
-        .display-content.w-100.bg-white.px-5
+        .display-content.w-100.bg-white
             .display-buttons-container.d-flex.justify-content-center.align-items-center
                 a.display-button.d-flex.justify-content-center.align-items-center.btn.btn-outline(href="#") travel
                 .circle
                 a.display-button.d-flex.justify-content-center.align-items-center.btn.btn-outline(href="#") travel
-            h3.display-title 
-                 b= blockTitle
+            if socialAdd == "y"
+                h3.display-title 
+                    b= blockTitle
+            else 
+                h4.display-title 
+                    b= blockTitle
             p#news-text= blockText
         .display-bottom.d-flex.justify-content-between.align-items-center.w-100
             button.btn.btn-outline.bottom-button-left APRIL 29, 2014
@@ -44,9 +48,10 @@ mixin commented-articles(articlesNumber)
          li.articles-item.d-flex.justify-content-between.w100
             .articles-img
             .articles-content 
-                .articles-title Playfair Display: A new level of new typefaces and fonts.
+                h5.articles-title 
+                    b Playfair Display: A new level of new typefaces and fonts.
                 .articles-comment.text-uppercase 
-                    <i class="fas fa-comment">23 COMMENTS</i>
+                    i.fas.fa-comment.text-uppercase &nbsp; 23 comments
                     
 
 
@@ -102,8 +107,8 @@ mixin commented-articles(articlesNumber)
                 .right-content-block.w-100.bg-white 
                     +shareButton
                     form.subscribe-form.w-100
-                        input.form-control.subscribe-input.w-100(type="email" placeholder="E-mail address.. ")
-                        a.btn.subscribe-button.w-100.rounded-bottom.d-flex.justify-content-center.align-items-center(href="#") SUBSCRIBE
+                        input.form-control.custom-input.w-100(type="email" placeholder="E-mail address.. ")
+                        a.btn.input-button.w-100.rounded-bottom.d-flex.justify-content-center.align-items-center(href="#") SUBSCRIBE
                 .right-content-block.w-100.bg-white 
                     +shareButton
                     ul.articles-list
@@ -111,9 +116,9 @@ mixin commented-articles(articlesNumber)
                 .right-content-block.w-100.bg-white 
                     +shareButton
                     .input-group.mb-3
-                        input.form-control(type='text' placeholder="Search" aria-label="?" aria-describedby='button-addon2')
-                        button#button-addon2.btn(type='button')
-                            i.far.fa-search
+                        input.form-control.custom-input(type='text' placeholder="Search" aria-label="?" aria-describedby='button-addon2')
+                        button.btn.input-button(type='button')
+                            i.fas.fa-search
 
 
 

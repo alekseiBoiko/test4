@@ -1,17 +1,40 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
 body {
     max-width: 1685px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
     background-image: url(../images/bg_part.jpg);
     background-size: contain;
+}
+
+#header, #content, #footer {
+    padding: 2.8rem 15% 70px 16%;
 }
 
 h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
 }
 
+h2 {
+    font-size: 1.875rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
 #news-text {
-    margin: 40px 0;
+    margin: 36px 0 53px;
     font-family: 'droid_serifregular', sans-serif;
     font-size: 14px;
     color: #4a4a4a;

@@ -1,56 +1,80 @@
-#header-top {
-    height: 70px;
-    text-transform: uppercase;
+#header {
+    #header-top {
+        height: 4.4rem;
+        text-transform: uppercase;
 
-    .nav {
-        width: 514px;
-        padding: 0;
+        .nav {
+            width: 545px;
+            padding: 0;
+            margin-right: 2rem;
 
-        .nav-link {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 13px;
-            color: #4d4d4d;
+            .nav-item {
+                position: relative;        
 
-            &:hover,&:active {
-                color: $green;
+                &::after {
+                    position: absolute;
+                    top: 2px;
+                    left: 110%;
+                    width: 4px;
+                    height: 70%;
+                    content: "";
+                    background: linear-gradient(#fff 50%, #c7c7c7 50%);
+                    background-size: 100% 3px;
+                }
+
+                .nav-link {
+                    padding: 0.2rem 1rem;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 13px;
+                    color: #4d4d4d;
+
+                    &:hover,&:active {
+                        color: $green;
+                    }
+                }
+
+                &:last-child::after {
+                    display: none;
+                }
             }
         }
     }
-}
 
-%greenline {
-    position: absolute;
-    top: 13px;
-    width: 100px;
-    height: 2px;
-    content: "";
-    background-color: $green;
-}
-
-.logo {
-    margin: 125px 0 100px 0;
-
-    .social-list {
-        width: 170px;
-        margin-bottom: 30px;
+    %greenline {
+        position: absolute;
+        top: 13px;
+        width: 100px;
+        height: 2px;
+        content: "";
+        background-color: $green;
     }
 
-    .tagline {
-        position: relative;
-        margin: 3px 0 1rem 0;
-        font-family: 'bira_personal_use_onlyregular';
-        font-size: 12px;
+    .logo {
+        margin: 4.2rem 0 2rem 0;
 
-        &::before {
-            @extend %greenline;
-
-            right: 200px;
+        .social-list {
+            width: 170px;
+            margin-bottom: 1.35rem;
+            font-size: 1rem;
         }
 
-        &::after {
-            @extend %greenline;
+        .tagline {
+            position: relative;
+            margin: 3px 0 1rem 0;
+            font-family: 'bira_personal_use_onlyregular';
+            font-size: 12px;
 
-            left: 200px;
+            &::before {
+                @extend %greenline;
+
+                right: 180px;
+            }
+
+            &::after {
+                @extend %greenline;
+
+                left: 180px;
+            }
         }
     }
 }

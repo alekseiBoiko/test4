@@ -1,26 +1,24 @@
 .carousel-item-custom {
-        z-index: 1;
-        color: white;
-        background-color: #595959;
+    z-index: 1;
+    color: white;
+    background-color: #595959;
 
-        .slide-title {
-            max-width: 545px;
-            margin: 170px 0 40px 0;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 30px;
-        }
-    
-        .slide-text {
-            max-width: 440px;
-            font-family: 'droid_serifitalic';
-            font-size: 15px;
-        }
-}   
+    .slide-title {
+        max-width: 545px;
+        margin: 170px 0 40px 0;
+    }
+
+    .slide-text {
+        max-width: 440px;
+        font-family: 'droid_serifitalic';
+        font-size: 15px;
+    }
+}
 
 .move-icon {
-    width: 60px;
-    height: 60px;
-    margin-top: 90px;
+    width: 3.44rem;
+    height: 3.44rem;
+    margin: 10px 0 0 60px;
     background-color: #474747;
     border-radius: 3px;
 
