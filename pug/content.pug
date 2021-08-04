@@ -1,11 +1,9 @@
-- var bigBlockTitle = "Playfair Display: A new level of new typefaces and fonts that will make you literally glow..."
 - var bigBlockText = "Ready to amp up your closet with the season’s must-have accessory? Thanks to celebs like Kendall Jenner and Rosie Huntington-Whiteley, Western-inspired belts have quickly become fashion’s cool-girl accessory. Really, we’ve gathered a gang of stylish celebs and top bloggers wearing the big-buckled belt to prove the accessory amps up any outfit. So, are you ready."
-- var smallBlockTitle = "Playfair Display: A new level of new typefaces & fonts."
 - var smallBlockText = "Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily "
 
 mixin lifestyleBlock (blockNumber)
     - for (var x=0; x<blockNumber; x++)
-        li.col-4.lifestyle-col
+        li.col-4.lifestyle-col.p-0
             .lifestyle-container
                 .lifestyle-box
             if x ==0
@@ -15,24 +13,25 @@ mixin lifestyleBlock (blockNumber)
                 a.lifestyle-button.d-flex.justify-content-center.align-items-center(href="#") 
                     b lifestyle
 
-mixin travelBlock (blockTitle, blockText, socialAdd)
-    .travel-block.d-flex.flex-column.justify-content-between.align-items-center.text-center.w-100.mt-5 
-        .displayImage.w-100
-        .display-content.w-100.bg-white
-            .display-buttons-container.d-flex.justify-content-center.align-items-center
-                a.display-button.d-flex.justify-content-center.align-items-center.btn.btn-outline(href="#") travel
+mixin travelBlock (blockSize)
+    div(class=`travel-block-${blockSize} text-center w-100`)
+        .w-100.display-image
+        .display-content.w-100.bg-white.d-flex.flex-column.align-items-center
+            .btn-group.display-buttons-container.d-flex.align-items-center
+                a.display-button.btn.btn-outline.rounded(href="#") travel
                 .circle
-                a.display-button.d-flex.justify-content-center.align-items-center.btn.btn-outline(href="#") travel
-            if socialAdd == "y"
-                h3.display-title 
-                    b= blockTitle
+                a.display-button.btn.btn-outline.rounded(href="#") travel
+            if blockSize=='big' 
+                h3
+                    b="Playfair Display: A new level of new typefaces and fonts that will make you literally glow..."
+                p#news-text="Ready to amp up your closet with the season’s must-have accessory? Thanks to celebs like Kendall Jenner and Rosie Huntington-Whiteley, Western-inspired belts have quickly become fashion’s cool-girl accessory. Really, we’ve gathered a gang of stylish celebs and top bloggers wearing the big-buckled belt to prove the accessory amps up any outfit. So, are you ready."
             else 
-                h4.display-title 
-                    b= blockTitle
-            p#news-text= blockText
+                h4
+                    b="Playfair Display: A new level of new typefaces & fonts."
+                p#news-text="Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily" 
         .display-bottom.d-flex.justify-content-between.align-items-center.w-100
             button.btn.btn-outline.bottom-button-left APRIL 29, 2014
-            if socialAdd == "y"
+            if blockSize =='big'
               +socialList('display-social-icon')
             .btn-group(role='group')
                 button.btn.btn-outline.bottom-button-right READ MORE
@@ -56,31 +55,31 @@ mixin commented-articles(articlesNumber)
 
 
 #content
-    .container
-        ul.row.lifestyle-inner.justify-content-between.mt-5
+    .container.p-0
+        ul.row.lifestyle-inner.justify-content-between.p-0
             +lifestyleBlock ('3')
         .row
             .col-8.left-content-side
-                +travelBlock (bigBlockTitle, bigBlockText, "y")
+                +travelBlock ('big')
                 .row 
-                    .col-6
-                        +travelBlock (smallBlockTitle, smallBlockText)
-                    .col-6 
-                        +travelBlock (smallBlockTitle, smallBlockText)
-                +travelBlock (bigBlockTitle, bigBlockText, "y")
+                    .col-6.pe-4
+                        +travelBlock ('small')
+                    .col-6.ps-4 
+                        +travelBlock ('small')
+                +travelBlock ('big')
                 .row
-                    .col-6
-                        +travelBlock (smallBlockTitle, smallBlockText)
-                    .col-6 
-                        +travelBlock (smallBlockTitle, smallBlockText)
-                +travelBlock (bigBlockTitle, bigBlockText, "y")
-                .pagination.d-flex.justify-content-center.align-items-center.my-5 
+                    .col-6.pe-4.pt-1
+                        +travelBlock ('small')
+                    .col-6.ps-4.pt-1 
+                        +travelBlock ('small')
+                +travelBlock ('big')
+                .pagination.d-flex.justify-content-center.align-items-center.pagination-custom
                     .page-item
-                        a.page-link.pagination-item-custom
+                        a.page-link
                             b « NEWER POSTS
                     .page-div / 
                     .page-item
-                        a.page-link.pagination-item-custom 
+                        a.page-link
                             b OLDER POSTS »
             .col-4.right-content-side
                 .right-content-block.w-100.bg-white 
