@@ -22,6 +22,7 @@
             .share-social-icon {
                 width: 35px;
                 height: 35px;
+                margin-right: 5px;
                 color: white;
                 background-color: black;
                 border-radius: 50%;
@@ -29,6 +30,18 @@
                 &:hover {
                     background-color: $green;
                 }
+            }
+
+            .testimonials-social-icon {
+                color: black;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+
+            .logo-social-icon, .display-social-icon, .share-social-icon, .testimonials-social-icon {
+                @include transition(color background-color);
             }
         }
     }

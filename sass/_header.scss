@@ -25,11 +25,13 @@
                     background-size: 100% 3px;
                 }
 
-                .nav-link {
+                .nav-link,.dropdown-item-link-custom {
                     padding: 0.2rem 1rem;
                     font-family: 'Montserrat', sans-serif;
                     font-size: 13px;
                     color: #4d4d4d;
+
+                    @include transition(color);
 
                     &:hover,&:active {
                         color: $green;
@@ -38,6 +40,10 @@
 
                 &:last-child::after {
                     display: none;
+                }
+
+                .dropdown-item-custom {
+                    @include transition(background-color);
                 }
             }
         }

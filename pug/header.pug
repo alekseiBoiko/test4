@@ -1,10 +1,23 @@
+mixin dropDownItems (itemsNumber)
+  - for (var x=0; x<itemsNumber; x++)
+    li.dropdown-item-custom
+      a.dropdown-item.dropdown-item-link-custom(href='#') Action #{x+1}
+
 header#header
   #header-top.fixed-top.bg-light.d-flex.justify-content-center.align-items-center
     ul.nav.d-flex.justify-content-between
       each value, name in {'main' : '1', 'demos' : '2', 'portfolio' : '3', 'blog' : '4', 'shortcodes' : '5'}
-        li.nav-item
-          a.nav-link(href="#"+value)
-            b=name
+        if value==1
+          li.nav-item.dropdown
+            a#dropdownMenuLink.nav-link(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false")
+              b=name
+              i.fas.fa-chevron-down.ms-1
+            ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
+              +dropDownItems('3')
+        else
+          li.nav-item
+            a.nav-link(href="#"+value) 
+              b=name
   .logo.d-flex.flex-column.align-items-center
     +socialList('logo-social-icon')
     .tagline 

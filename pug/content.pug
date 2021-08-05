@@ -1,11 +1,8 @@
-- var bigBlockText = "Ready to amp up your closet with the season’s must-have accessory? Thanks to celebs like Kendall Jenner and Rosie Huntington-Whiteley, Western-inspired belts have quickly become fashion’s cool-girl accessory. Really, we’ve gathered a gang of stylish celebs and top bloggers wearing the big-buckled belt to prove the accessory amps up any outfit. So, are you ready."
-- var smallBlockText = "Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily "
-
 mixin lifestyleBlock (blockNumber)
     - for (var x=0; x<blockNumber; x++)
         li.col-4.lifestyle-col.p-0
             .lifestyle-container
-                .lifestyle-box
+                .lifestyle-box.w-100.h-100
             if x ==0
                 a.lifestyle-button.active.d-flex.justify-content-center.align-items-center(href="#") 
                     b lifestyle
@@ -19,13 +16,13 @@ mixin travelBlock (blockSize)
         .display-content.w-100.bg-white.d-flex.flex-column.align-items-center
             .btn-group.display-buttons-container.d-flex.align-items-center
                 a.display-button.btn.btn-outline.rounded(href="#") travel
-                .circle
+                .circle.mx-2.rounded-circle
                 a.display-button.btn.btn-outline.rounded(href="#") travel
             if blockSize=='big' 
                 h3
                     b="Playfair Display: A new level of new typefaces and fonts that will make you literally glow..."
                 p#news-text="Ready to amp up your closet with the season’s must-have accessory? Thanks to celebs like Kendall Jenner and Rosie Huntington-Whiteley, Western-inspired belts have quickly become fashion’s cool-girl accessory. Really, we’ve gathered a gang of stylish celebs and top bloggers wearing the big-buckled belt to prove the accessory amps up any outfit. So, are you ready."
-            else 
+            if blockSize=='small' 
                 h4
                     b="Playfair Display: A new level of new typefaces & fonts."
                 p#news-text="Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily" 
@@ -59,7 +56,7 @@ mixin commented-articles(articlesNumber)
         ul.row.lifestyle-inner.justify-content-between.p-0
             +lifestyleBlock ('3')
         .row
-            .col-8.left-content-side
+            .col-8.left-content-side.py-5
                 +travelBlock ('big')
                 .row 
                     .col-6.pe-4
@@ -81,42 +78,42 @@ mixin commented-articles(articlesNumber)
                     .page-item
                         a.page-link
                             b OLDER POSTS »
-            .col-4.right-content-side
-                .right-content-block.w-100.bg-white 
+            .col-4.right-content-side.py-5
+                .right-content-block.w-100.bg-white.mb-5 
                     .gift-inner.w-100.d-flex.flex-column.justify-content-end.align-items-center
                         img.img-fluid.gift-img(src="images/world-gift.png", alt="world gift")
                         .gift-text.text-center 
                             b.text-uppercase or get started on some job...    
-                .right-content-block.w-100.bg-white
+                .right-content-block.w-100.bg-white.mb-5
                     +shareButton
-                    .follow-block.d-flex.justify-content-between.align-items-center
-                        .follow-text 
+                    .follow-block.d-flex.justify-content-between.align-items-center.mb-2
+                        .follow-text.mb-3 
                             b FOLLOW ME
-                            i.fas.fa-caret-right.ms-1
+                            i.fas.fa-caret-right.ms-2
                         +socialList ('share-social-icon')
-                .right-content-block.w-100.bg-white 
+                .right-content-block.w-100.bg-white.mb-5
                     +shareButton
-                    .testimonials-img 
+                    .testimonials-img
                     #news-text.text-center Western-inspired belts have quickly become fashion’s cool-girl accessory. Really,  prove the accessory amps up any outfit. So, are you ready to really support..
-                    .testimonials-link.w-100.text-center
+                    .testimonials-link.w-100.text-center.my-4
                         a(href="#") Read more →
                     .testimonials-sign.d-flex.justify-content-center
                         img.img-fluid(src="images/signature.png", alt="signature")
                     +socialList ('testimonials-social-icon')
-                .right-content-block.w-100.bg-white 
+                .right-content-block.w-100.bg-white.mb-5 
                     +shareButton
-                    form.subscribe-form.w-100
+                    form.subscribe-form.w-100.pb-4
                         input.form-control.custom-input.w-100(type="email" placeholder="E-mail address.. ")
-                        a.btn.input-button.w-100.rounded-bottom.d-flex.justify-content-center.align-items-center(href="#") SUBSCRIBE
-                .right-content-block.w-100.bg-white 
+                        a.btn.input-button.w-100.d-flex.justify-content-center.align-items-center(href="#") SUBSCRIBE
+                .right-content-block.w-100.bg-white.mb-5 
                     +shareButton
-                    ul.articles-list
+                    ul.articles-list.p-0
                         +commented-articles('4')
-                .right-content-block.w-100.bg-white 
+                .right-content-block.w-100.bg-white.mb-5 
                     +shareButton
-                    .input-group.mb-3
+                    .input-group.mt-3.mb-1
                         input.form-control.custom-input(type='text' placeholder="Search" aria-label="?" aria-describedby='button-addon2')
-                        button.btn.input-button(type='button')
+                        button.btn.input-button.rounded-end(type='button')
                             i.fas.fa-search
 
 
