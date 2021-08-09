@@ -116,6 +116,7 @@
             color: black;
             background: none;
             border: none;
+            @include transition (color);
 
             &:hover, &:active {
                 color: $green;
@@ -155,16 +156,20 @@
             background-color: #808080;
         }
 
-        .testimonials-link a {
+        .testimonials-link {
             font-family: 'droid_serifregular', sans-serif;
             font-size: 14px;
-            color: #2b6;
+            color: $green;
+            @include transition(font-weight);
+            
+            &:hover {
+                font-weight: bold;
+            }
         }
 
         .testimonials-sign {
             margin-bottom: 1.875rem;
         }
-
 
         .articles-list {
             margin: 1rem 0 -30px 0;

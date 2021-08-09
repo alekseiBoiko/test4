@@ -67,10 +67,14 @@ h5 {
   font-size: 14px;
   color: #4a4a4a; }
 
-.slide-button, .lifestyle-button, .lifestyle-button.active, .display-button, .bottom-button-left, .bottom-button-right, .share-button, .display-button-addon, .input-button {
+.slide-button, .lifestyle-button, .lifestyle-button.active, .display-button, .bottom-button-left, .bottom-button-right, .share-button, .display-button-addon, .input-button, .top-btn {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-transition: color 0.5s ease 0s , background-color 0.5s ease 0s , border 0.5s ease 0s , -webkit-box-shadow 0.5s ease 0s;
+  transition: color 0.5s ease 0s , background-color 0.5s ease 0s , border 0.5s ease 0s , -webkit-box-shadow 0.5s ease 0s;
+  transition: color 0.5s ease 0s , background-color 0.5s ease 0s , border 0.5s ease 0s , box-shadow 0.5s ease 0s;
+  transition: color 0.5s ease 0s , background-color 0.5s ease 0s , border 0.5s ease 0s , box-shadow 0.5s ease 0s , -webkit-box-shadow 0.5s ease 0s; }
 
 .slide-button {
   position: relative;
@@ -104,7 +108,6 @@ h5 {
   height: 37px;
   font-size: 12px;
   color: black;
-  background-color: white;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
   .lifestyle-button::before, .lifestyle-button.active::before, .lifestyle-button::after, .lifestyle-button.active::after {
@@ -117,6 +120,8 @@ h5 {
     width: 144px;
     height: 50px;
     border: 2px solid white; }
+  .lifestyle-button:hover {
+    color: #22bb66; }
 
 .active.lifestyle-button::after {
   left: 50%;
@@ -140,7 +145,7 @@ h5 {
     background: #22bb66; }
 
 .bottom-button-left, .bottom-button-right, .share-button {
-  height: 1.88rem;
+  min-height: 1.88rem;
   font-size: 0.625rem;
   color: #c7c7c7;
   border-radius: 3px;
@@ -148,14 +153,14 @@ h5 {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.25); }
 
 .bottom-button-left {
-  width: 140px; }
+  width: 8.75rem; }
 
 .bottom-button-right {
-  width: 115px; }
+  width: 7.1875rem; }
 
 .display-button-addon {
-  width: 25px;
-  height: 1.88rem;
+  width: 1.5625rem;
+  min-height: 1.88rem;
   font-size: 0.625rem;
   color: white;
   background-color: #22bb66;
@@ -187,31 +192,44 @@ h5 {
 .custom-input {
   color: #bdbdbd;
   background-color: #f7f7f7;
-  border: none; }
+  border: none;
+  border-radius: 3px 3px 0 0; }
+  .custom-input:focus {
+    border: 2px solid #22bb66;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 .input-button {
   color: #f7f7f7;
   background-color: #21bb65;
-  border-radius: 0 0 3px 3px; }
+  border-radius: 0 0 3px 3px;
+  border: 2px solid #22bb66; }
 
-.footer-input-button {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9375rem;
-  color: #666; }
+.subscribe-link {
+  display: none; }
 
 .footer-input {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
   color: #bdbdbd;
   border: none; }
-  .footer-input:active {
-    border: 2px solid #bdbdbd; }
+  .footer-input:focus {
+    padding-left: 0;
+    border: 2px solid #bdbdbd;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    .footer-input:focus, .footer-input:focus .subscribe-link {
+      display: block; }
 
 .top-btn {
   width: 6.875rem;
   height: 6.875rem;
   margin: 2rem 0 0 1rem;
   background-color: #f1f1f1; }
+  .top-btn:hover {
+    color: #22bb66;
+    -webkit-box-shadow: 0 0 5px 5px #22bb66;
+    box-shadow: 0 0 5px 5px #22bb66; }
   .top-btn .fa-chevron-up {
     font-size: 2rem; }
   .top-btn .btn-text {
@@ -395,7 +413,9 @@ h5 {
       font-size: 12px;
       color: black;
       background: none;
-      border: none; }
+      border: none;
+      -webkit-transition: color 0.5s ease 0s;
+      transition: color 0.5s ease 0s; }
       .left-content-side .pagination-custom a:hover, .left-content-side .pagination-custom a:active {
         color: #22bb66; }
 
@@ -421,10 +441,14 @@ h5 {
       height: 16.625rem;
       margin: 1rem 7% 2.5rem 4%;
       background-color: #808080; }
-    .right-content-side .right-content-block .testimonials-link a {
+    .right-content-side .right-content-block .testimonials-link {
       font-family: 'droid_serifregular', sans-serif;
       font-size: 14px;
-      color: #2b6; }
+      color: #22bb66;
+      -webkit-transition: font-weight 0.5s ease 0s;
+      transition: font-weight 0.5s ease 0s; }
+      .right-content-side .right-content-block .testimonials-link:hover {
+        font-weight: bold; }
     .right-content-side .right-content-block .testimonials-sign {
       margin-bottom: 1.875rem; }
     .right-content-side .right-content-block .articles-list {
@@ -442,8 +466,45 @@ h5 {
 
 #footer {
   min-height: 245px; }
+  #footer .footer-input-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9375rem;
+    color: #666; }
   #footer .copyright {
     height: 63px;
     font-family: 'Playfair Display', serif;
     font-size: 0.875rem;
     font-weight: bold; }
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 14px; }
+    html .bottom-button-left {
+      width: 5rem; }
+    html .bottom-button-right {
+      max-width: 4rem; }
+    html .share-button::before, html .share-button::after {
+      width: 30px; }
+    html .share-button::before {
+      left: 75px; }
+    html .share-button::after {
+      right: 75px; }
+    html .footer-input-text {
+      padding-left: 3rem; } }
+
+@media only screen and (max-width: 768px) {
+  .left-content-side, .right-content-side {
+    padding: 0; }
+  .top-btn {
+    width: 5rem;
+    height: 5rem; } }
+
+@media only screen and (max-width: 576px) {
+  .lifestyle-inner .lifestyle-col {
+    width: 30%;
+    height: 10rem; }
+    .lifestyle-inner .lifestyle-col .lifestyle-button {
+      width: 50%;
+      font-size: 10px; }
+      .lifestyle-inner .lifestyle-col .lifestyle-button::before {
+        width: 125%; } }

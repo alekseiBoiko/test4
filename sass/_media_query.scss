@@ -1,0 +1,61 @@
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 14px;
+
+        .bottom-button-left {
+            width: 5rem;
+        }
+
+        .bottom-button-right {
+            max-width: 4rem;
+        }
+
+        .share-button {
+
+            &::before, &::after {
+                width: 30px;
+            }
+
+            &::before {
+                left: 75px;
+            }
+
+            &::after {
+                right: 75px;
+            }
+        }
+
+        .footer-input-text {
+            padding-left: 3rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .left-content-side, .right-content-side {
+        padding: 0;
+    }
+
+    .top-btn {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .lifestyle-inner {
+        .lifestyle-col {
+            width: 30%;
+            height: 10rem;
+
+            .lifestyle-button {
+                width: 50%;
+                font-size: 10px;
+
+                &::before {
+                    width: 125%;
+                }
+            }
+        }
+    }
+}

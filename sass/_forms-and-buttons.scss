@@ -2,11 +2,14 @@
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
+    @include transition(color background-color border box-shadow);
+}
+
+.slide-button, .lifestyle-button, .display-button, %bottom-button, .display-button-addon, .input-button, .top-btn {
+    @extend %button;
 }
 
 .slide-button {
-    @extend %button;
-
     position: relative;
     width: 163px;
     height: 43px;
@@ -33,8 +36,6 @@
 }
 
 .lifestyle-button {
-    @extend %button;
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,7 +43,6 @@
     height: 37px;
     font-size: 12px;
     color: black;
-    background-color: white;
     transform: translate(-50%, -50%);
 
     &::before, &::after {
@@ -57,6 +57,10 @@
         width: 144px;
         height: 50px;
         border: 2px solid white;
+    }
+
+    &:hover {
+        color: $green;
     }
 }
 
@@ -75,8 +79,6 @@
 }
 
 .display-button {
-    @extend %button;
-
     width: 78px;
     height: 27px;
     font-size: 10px;
@@ -91,32 +93,28 @@
 }
 
 %bottom-button {
-    @extend %button;
-
-    height: 1.88rem;
+    min-height: 1.88rem;
     font-size: 0.625rem;
     color: #c7c7c7;
     border-radius: 3px;
     box-shadow: 0 0 2px rgba(0,0,0,0.25);
 }
 
-.bottom-button-left {
+.bottom-button-left, .bottom-button-right {
     @extend %bottom-button;
+}
 
-    width: 140px;
+.bottom-button-left {
+    width: 8.75rem;
 }
 
 .bottom-button-right {
-    @extend %bottom-button;
-
-    width: 115px;
+    width: 7.1875rem;
 }
 
 .display-button-addon {
-    @extend %button;
-
-    width: 25px;
-    height: 1.88rem;
+    width: 1.5625rem;
+    min-height: 1.88rem;
     font-size: 0.625rem;
     color: white;
     background-color: $green;
@@ -158,21 +156,23 @@
     color: #bdbdbd;
     background-color: #f7f7f7;
     border: none;
-    // border-radius: 0;
+    border-radius: 3px 3px 0 0;
+    
+    &:focus {
+        border: 2px solid $green;
+        box-shadow: none;
+    }
 }
 
 .input-button {
-    @extend %button;
-
     color: #f7f7f7;
     background-color: #21bb65;
     border-radius: 0 0 3px 3px;
+    border: 2px solid $green;
 }
 
-.footer-input-button {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9375rem;
-    color: #666;
+.subscribe-link {
+    display: none;
 }
 
 .footer-input {
@@ -181,8 +181,16 @@
     color: #bdbdbd;
     border: none;
 
-    &:active {
+    
+
+    &:focus {
+        padding-left: 0;
         border: 2px solid #bdbdbd;
+        box-shadow: none;
+
+        &,.subscribe-link {
+            display: block;
+        }
     }
 }
 
@@ -191,6 +199,11 @@
     height: 6.875rem;
     margin: 2rem 0 0 1rem;
     background-color: #f1f1f1;
+
+    &:hover {
+        color: $green;
+        box-shadow: 0 0 5px 5px $green;
+    }
 
     .fa-chevron-up {
         font-size: 2rem;
@@ -206,4 +219,3 @@
         }
     }
 }
-

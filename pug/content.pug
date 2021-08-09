@@ -4,10 +4,10 @@ mixin lifestyleBlock (blockNumber)
             .lifestyle-container
                 .lifestyle-box.w-100.h-100
             if x ==0
-                a.lifestyle-button.active.d-flex.justify-content-center.align-items-center(href="#") 
+                a.lifestyle-button.active.d-flex.justify-content-center.align-items-center.bg-white(href="#") 
                     b lifestyle
             else 
-                a.lifestyle-button.d-flex.justify-content-center.align-items-center(href="#") 
+                a.lifestyle-button.d-flex.justify-content-center.align-items-center.bg-white(href="#") 
                     b lifestyle
 
 mixin travelBlock (blockSize)
@@ -30,7 +30,7 @@ mixin travelBlock (blockSize)
             button.btn.btn-outline.bottom-button-left APRIL 29, 2014
             if blockSize =='big'
               +socialList('display-social-icon')
-            .btn-group(role='group')
+            .btn-group.d-flex.justify-content-end(role='group')
                 button.btn.btn-outline.bottom-button-right READ MORE
                 a.btn.display-button-addon.d-flex.justify-content-center.align-items-center(href="#")
                   i.fas.fa-chevron-right
@@ -56,7 +56,7 @@ mixin commented-articles(articlesNumber)
         ul.row.lifestyle-inner.justify-content-between.p-0
             +lifestyleBlock ('3')
         .row
-            .col-8.left-content-side.py-5
+            .col-md-8.col-12.left-content-side.py-5
                 +travelBlock ('big')
                 .row 
                     .col-6.pe-4
@@ -78,28 +78,29 @@ mixin commented-articles(articlesNumber)
                     .page-item
                         a.page-link
                             b OLDER POSTS »
-            .col-4.right-content-side.py-5
+            .col-md-4.col-12.right-content-side.py-5
                 .right-content-block.w-100.bg-white.mb-5 
                     .gift-inner.w-100.d-flex.flex-column.justify-content-end.align-items-center
-                        img.img-fluid.gift-img(src="images/world-gift.png", alt="world gift")
+                        a(href="")
+                            img.img-fluid.gift-img(src="images/world-gift.png", alt="world gift")
                         .gift-text.text-center 
                             b.text-uppercase or get started on some job...    
                 .right-content-block.w-100.bg-white.mb-5
                     +shareButton
-                    .follow-block.d-flex.justify-content-between.align-items-center.mb-2
-                        .follow-text.mb-3 
+                    .follow-block.d-flex.d-lg-block.d-xl-flex.justify-content-between.align-items-center.mb-2
+                        .follow-text.mb-3.text-center 
                             b FOLLOW ME
                             i.fas.fa-caret-right.ms-2
                         +socialList ('share-social-icon')
-                .right-content-block.w-100.bg-white.mb-5
+                .right-content-block.w-100.bg-white.mb-5.d-flex.flex-column.justify-content-start.align-items-center
                     +shareButton
-                    .testimonials-img
+                    .testimonials-img.w-100
                     #news-text.text-center Western-inspired belts have quickly become fashion’s cool-girl accessory. Really,  prove the accessory amps up any outfit. So, are you ready to really support..
-                    .testimonials-link.w-100.text-center.my-4
-                        a(href="#") Read more →
+                    a.testimonials-link.w-100.text-center.my-4(href="#") Read more →
                     .testimonials-sign.d-flex.justify-content-center
                         img.img-fluid(src="images/signature.png", alt="signature")
-                    +socialList ('testimonials-social-icon')
+                    .testimonials-social-list-container.w-50
+                        +socialList ('testimonials-social-icon')
                 .right-content-block.w-100.bg-white.mb-5 
                     +shareButton
                     form.subscribe-form.w-100.pb-4

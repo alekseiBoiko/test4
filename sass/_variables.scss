@@ -42,18 +42,10 @@ $light-gray: #c7c7c7;
 //   "dark":       $dark,
 // );
 
-// $font-sizes: (
-//   1: $h1-font-size,
-//   2: $h2-font-size,
-//   3: $h3-font-size,
-//   4: $h4-font-size,
-//   5: $h5-font-size,
-//   6: $h6-font-size
-// );
-
-// $h1-font-size:                $font-size-base * 2.5;
-// $h2-font-size:                $font-size-base * 2;
-// $h3-font-size:                $font-size-base * 1.75;
-// $h4-font-size:                $font-size-base * 1.5;
-// $h5-font-size:                $font-size-base * 1.25;
-// $h6-font-size:                $font-size-base;
+// Breakpoint	Class infix	Dimensions
+// X-Small	None	<576px
+// Small	sm	≥576px
+// Medium	md	≥768px
+// Large	lg	≥992px
+// Extra large	xl	≥1200px
+// Extra extra large	xxl	≥1400px
