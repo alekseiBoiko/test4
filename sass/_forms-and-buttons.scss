@@ -2,6 +2,7 @@
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
+
     @include transition(color background-color border box-shadow);
 }
 
@@ -20,7 +21,7 @@
     background-color: $green;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
 
     &::before {
         position: absolute;
@@ -40,7 +41,7 @@
     top: 50%;
     left: 50%;
     width: 131px;
-    height: 37px;
+    height: 2.31rem;
     font-size: 12px;
     color: black;
     transform: translate(-50%, -50%);
@@ -67,11 +68,9 @@
         left: 40%;
         width: 23px;
         height: 250px;
-        // margin-right: -50%;
         content: '';
         background-color: white;
         -ms-transform: translateY(-50%);
-        // transform: translateX(-50%);
     }
 }
 
@@ -94,7 +93,7 @@
     font-size: 0.625rem;
     color: #c7c7c7;
     border-radius: 3px;
-    box-shadow: 0 0 2px rgba(0,0,0,0.25);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
 }
 
 .bottom-button-left, .bottom-button-right {
@@ -117,7 +116,7 @@
     background-color: $green;
     border: none;
     border-radius: 0 3px 3px 0;
-    box-shadow: 0 0 2px rgba(0,0,0,0.25);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
 }
 
 .share-button {
@@ -132,7 +131,7 @@
         width: 70px;
         height: 3px;
         content: "";
-        box-shadow: 0 0 2px rgba(0,0,0,0.25);
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
     }
 
     &::before {
@@ -154,7 +153,7 @@
     background-color: #f7f7f7;
     border: none;
     border-radius: 3px 3px 0 0;
-    
+
     &:focus {
         border: 2px solid $green;
         box-shadow: none;
@@ -164,12 +163,8 @@
 .input-button {
     color: #f7f7f7;
     background-color: #21bb65;
-    border-radius: 0 0 3px 3px;
     border: 2px solid $green;
-}
-
-.subscribe-link {
-    display: none;
+    border-radius: 0 0 3px 3px;
 }
 
 .footer-input {
@@ -182,7 +177,6 @@
         padding-left: 0;
         border: 2px solid #bdbdbd;
         box-shadow: none;
-
     }
 }
 

@@ -25,9 +25,9 @@
             }
         }
 
-        .footer-input-text {
-            padding-left: 3rem;
-        }
+        // .footer-input-text {
+        //     padding-left: 3rem;
+        // }
     }
 }
 
@@ -44,7 +44,7 @@
 
 @media only screen and (max-width: 576px) {
     #header #header-top .nav .nav-item .nav-link, #header #header-top .nav .nav-item .dropdown-item-link-custom {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
         font-size: 10px;
     }
 
@@ -55,10 +55,12 @@
 
             .lifestyle-button {
                 width: 50%;
+                height: 2rem;
                 font-size: 8px;
 
                 &::before {
                     width: 125%;
+                    height: 3rem;
                 }
 
                 &.active::after {
