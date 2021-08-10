@@ -62,19 +62,16 @@
     &:hover {
         color: $green;
     }
-}
 
-.lifestyle-button.active {
-    @extend .lifestyle-button;
-
-    &::after {
-        left: 50%;
+    &.active::after {
+        left: 40%;
         width: 23px;
         height: 250px;
-        margin-right: -50%;
+        // margin-right: -50%;
         content: '';
         background-color: white;
-        transform: translate(-50%, 0);
+        -ms-transform: translateY(-50%);
+        // transform: translateX(-50%);
     }
 }
 
@@ -181,16 +178,11 @@
     color: #bdbdbd;
     border: none;
 
-    
-
     &:focus {
         padding-left: 0;
         border: 2px solid #bdbdbd;
         box-shadow: none;
 
-        &,.subscribe-link {
-            display: block;
-        }
     }
 }
 

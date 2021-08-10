@@ -19,13 +19,13 @@ mixin travelBlock (blockSize)
                 .circle.mx-2.rounded-circle
                 a.display-button.btn.btn-outline.rounded(href="#") travel
             if blockSize=='big' 
-                h3
+                h3.w-100
                     b="Playfair Display: A new level of new typefaces and fonts that will make you literally glow..."
-                p#news-text="Ready to amp up your closet with the season’s must-have accessory? Thanks to celebs like Kendall Jenner and Rosie Huntington-Whiteley, Western-inspired belts have quickly become fashion’s cool-girl accessory. Really, we’ve gathered a gang of stylish celebs and top bloggers wearing the big-buckled belt to prove the accessory amps up any outfit. So, are you ready."
+                p#news-text.w-100="Ready to amp up your closet with the season’s must-have accessory? Thanks to celebs like Kendall Jenner and Rosie Huntington-Whiteley, Western-inspired belts have quickly become fashion’s cool-girl accessory. Really, we’ve gathered a gang of stylish celebs and top bloggers wearing the big-buckled belt to prove the accessory amps up any outfit. So, are you ready."
             if blockSize=='small' 
-                h4
+                h4.w-100
                     b="Playfair Display: A new level of new typefaces & fonts."
-                p#news-text="Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily" 
+                p#news-text.w-100="Coming from two different cultures has been instrumental in how we’ve approached our design process. Himmelen is a daily" 
         .display-bottom.d-flex.justify-content-between.align-items-center.w-100
             button.btn.btn-outline.bottom-button-left APRIL 29, 2014
             if blockSize =='big'
@@ -41,13 +41,14 @@ mixin shareButton
 
 mixin commented-articles(articlesNumber)
     - for (var x=0; x<articlesNumber; x++)
-         li.articles-item.d-flex.justify-content-between.w100
-            .articles-img
-            .articles-content 
-                h5.articles-title 
-                    b Playfair Display: A new level of new typefaces and fonts.
-                .articles-comment.text-uppercase 
-                    i.fas.fa-comment.text-uppercase &nbsp; 23 comments
+         li
+            a.articles-item.d-flex.justify-content-between.w100(href="")
+                .articles-img
+                .articles-content 
+                    h5.articles-title 
+                        b Playfair Display: A new level of new typefaces and fonts.
+                    .articles-comment.text-uppercase 
+                        i.fas.fa-comment.text-uppercase &nbsp; 23 comments
                     
 
 
@@ -59,15 +60,15 @@ mixin commented-articles(articlesNumber)
             .col-md-8.col-12.left-content-side.py-5
                 +travelBlock ('big')
                 .row 
-                    .col-6.pe-4
+                    .col-12.col-sm-6.pe-4
                         +travelBlock ('small')
-                    .col-6.ps-4 
+                    .col-12.col-sm-6.ps-4 
                         +travelBlock ('small')
                 +travelBlock ('big')
                 .row
-                    .col-6.pe-4.pt-1
+                    .col-12.col-sm-6.pe-4.pt-1
                         +travelBlock ('small')
-                    .col-6.ps-4.pt-1 
+                    .col-12.col-sm-6.ps-4.pt-1 
                         +travelBlock ('small')
                 +travelBlock ('big')
                 .pagination.d-flex.justify-content-center.align-items-center.pagination-custom
@@ -81,13 +82,13 @@ mixin commented-articles(articlesNumber)
             .col-md-4.col-12.right-content-side.py-5
                 .right-content-block.w-100.bg-white.mb-5 
                     .gift-inner.w-100.d-flex.flex-column.justify-content-end.align-items-center
-                        a(href="")
+                        a.w-100.d-flex.justify-content-center(href="")
                             img.img-fluid.gift-img(src="images/world-gift.png", alt="world gift")
-                        .gift-text.text-center 
+                        .gift-text.text-center.w-100
                             b.text-uppercase or get started on some job...    
                 .right-content-block.w-100.bg-white.mb-5
                     +shareButton
-                    .follow-block.d-flex.d-lg-block.d-xl-flex.justify-content-between.align-items-center.mb-2
+                    .follow-block.d-lg-block.d-xl-flex.justify-content-between.align-items-center.mb-2
                         .follow-text.mb-3.text-center 
                             b FOLLOW ME
                             i.fas.fa-caret-right.ms-2
@@ -95,7 +96,7 @@ mixin commented-articles(articlesNumber)
                 .right-content-block.w-100.bg-white.mb-5.d-flex.flex-column.justify-content-start.align-items-center
                     +shareButton
                     .testimonials-img.w-100
-                    #news-text.text-center Western-inspired belts have quickly become fashion’s cool-girl accessory. Really,  prove the accessory amps up any outfit. So, are you ready to really support..
+                    #news-text.text-center.w-100 Western-inspired belts have quickly become fashion’s cool-girl accessory. Really,  prove the accessory amps up any outfit. So, are you ready to really support..
                     a.testimonials-link.w-100.text-center.my-4(href="#") Read more →
                     .testimonials-sign.d-flex.justify-content-center
                         img.img-fluid(src="images/signature.png", alt="signature")
